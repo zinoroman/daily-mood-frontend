@@ -1,0 +1,15 @@
+<h1>Your mood balls for today:</h1>
+
+<ol *ngIf="line.balls.length"
+    class="mood-line">
+    <li *ngFor="let ball of line.balls"
+        class="mood-line__item">
+        <div class="mood-line__level">
+            {{ ball.moodSid }}
+        </div>
+        <div class="mood-line__description"
+             *ngIf="ball.text.length">
+            {{ ball.text }}
+        </div>
+    </li>
+</ol>
